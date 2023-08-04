@@ -26,13 +26,13 @@ public class AnimalFactory {
         AnimalTypeData animalTypeData = AnimalTypeData.valueOf(animalType);
 
         switch (animalTypeData){
-            case CAT -> {
+            case CAT: {
                 return new Cat();
             }
-            case DOG -> {
+            case DOG: {
                 return new Dog();
             }
-            default -> {
+            default: {
                 return new Duck();
             }
         }

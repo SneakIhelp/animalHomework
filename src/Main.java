@@ -73,10 +73,15 @@ public class Main {
         while (true) {
             String ageString = scanner.next();
             try {
-                animal.setAge(Integer.parseInt(ageString));
-                break;
+                int age = Integer.parseInt(ageString);
+                if (age >= 0) {
+                    animal.setAge(age);
+                    break;
+                } else {
+                    System.out.println("Введен некорректный возраст. Попробуйте еще раз (должно быть неотрицательное число):");
+                }
             } catch (NumberFormatException e) {
-                System.out.println("Введен некорректный возраст. Попробуйте еще раз:");
+                System.out.println("Введен некорректный возраст. Попробуйте еще раз (должно быть числовое значение):");
             }
         }
 
@@ -84,10 +89,15 @@ public class Main {
         while (true) {
             String weightString = scanner.next();
             try {
-                animal.setWeight(Integer.parseInt(weightString));
-                break;
+                int weight = Integer.parseInt(weightString);
+                if (weight >= 0) {
+                    animal.setWeight(weight);
+                    break;
+                } else {
+                    System.out.println("Введен некорректный вес. Попробуйте еще раз (должно быть неотрицательное число):");
+                }
             } catch (NumberFormatException e) {
-                System.out.println("Введен некорректный вес. Попробуйте еще раз:");
+                System.out.println("Введен некорректный вес. Попробуйте еще раз (должно быть числовое значение):");
             }
         }
 
