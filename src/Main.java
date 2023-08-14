@@ -74,7 +74,7 @@ public class Main {
             String ageString = scanner.next();
             try {
                 int age = Integer.parseInt(ageString);
-                if (age >= 0) {
+                if (age > 0) {
                     animal.setAge(age);
                     break;
                 } else {
@@ -90,7 +90,7 @@ public class Main {
             String weightString = scanner.next();
             try {
                 int weight = Integer.parseInt(weightString);
-                if (weight >= 0) {
+                if (weight > 0) {
                     animal.setWeight(weight);
                     break;
                 } else {
